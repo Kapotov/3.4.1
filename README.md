@@ -32,8 +32,9 @@
     * удостоверьтесь, что с помощью systemctl процесс корректно стартует, завершается, а после перезагрузки автоматически поднимается.
 ![2023-03-01_22-41-52](https://user-images.githubusercontent.com/123774335/222248556-1eb6ccaf-f7fa-4120-a61b-991bf89ef1f4.png)
 
-1. Изучите опции node_exporter и вывод `/metrics` по умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
-#Ответ: 
+2. Изучите опции node_exporter и вывод `/metrics` по умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
+
+# Ответ :
 
 ```
 CPU:
@@ -59,7 +60,7 @@ Network:
    - node_network_transmit_drop_total{*};
    - node_network_receive_drop_total{*};
 ```
-1. Установите в свою виртуальную машину [Netdata](https://github.com/netdata/netdata). Воспользуйтесь [готовыми пакетами](https://packagecloud.io/netdata/netdata/install) для установки (`sudo apt install -y netdata`). 
+3. Установите в свою виртуальную машину [Netdata](https://github.com/netdata/netdata). Воспользуйтесь [готовыми пакетами](https://packagecloud.io/netdata/netdata/install) для установки (`sudo apt install -y netdata`). 
    
    После успешной установки:
    
