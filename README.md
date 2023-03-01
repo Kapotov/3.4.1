@@ -13,6 +13,7 @@
 
 1. Убедитесь, что у вас установлен [Netdata](https://github.com/netdata/netdata) c ресурса с предподготовленными [пакетами](https://packagecloud.io/netdata/netdata/install) или `sudo apt install -y netdata`.
 
+![2023-03-01_21-30-34](https://user-images.githubusercontent.com/123774335/222248166-775e5524-589a-4601-bb92-bce1a2b2d2a9.png)
 
 ### Дополнительные материалы для выполнения задания
 
@@ -24,10 +25,12 @@
 ## Задание
 
 1. На лекции вы познакомились с [node_exporter](https://github.com/prometheus/node_exporter/releases). В демонстрации его исполняемый файл запускался в background. Этого достаточно для демо, но не для настоящей production-системы, где процессы должны находиться под внешним управлением. Используя знания из лекции по systemd, создайте самостоятельно простой [unit-файл](https://www.freedesktop.org/software/systemd/man/systemd.service.html) для node_exporter:
+![2023-03-01_22-37-37](https://user-images.githubusercontent.com/123774335/222248303-657ac680-6c12-4ebc-b39d-b2547ecf7295.png)
 
     * поместите его в автозагрузку;
     * предусмотрите возможность добавления опций к запускаемому процессу через внешний файл (посмотрите, например, на `systemctl cat cron`);
     * удостоверьтесь, что с помощью systemctl процесс корректно стартует, завершается, а после перезагрузки автоматически поднимается.
+![2023-03-01_22-41-52](https://user-images.githubusercontent.com/123774335/222248556-1eb6ccaf-f7fa-4120-a61b-991bf89ef1f4.png)
 
 1. Изучите опции node_exporter и вывод `/metrics` по умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
 
