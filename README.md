@@ -33,7 +33,29 @@
 ![2023-03-01_22-41-52](https://user-images.githubusercontent.com/123774335/222248556-1eb6ccaf-f7fa-4120-a61b-991bf89ef1f4.png)
 
 1. Изучите опции node_exporter и вывод `/metrics` по умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
-
+#Ответ: 
+CPU:
+   - node_cpu_seconds_total{*};
+   - process_cpu_seconds_total;
+Memory:
+   - node_memory_MemAvailable_bytes;
+   - node_memory_MemTotal_bytes;
+   - node_vmstat_pgmajfault;
+Disk:
+   - node_disk_read_bytes_total{*};
+   - node_disk_written_bytes_total{*};
+   - node_filesystem_size_bytes{*};
+   - node_filesystem_avail_bytes{*};
+   - node_filesystem_files_free{*};
+   - node_disk_read_time_seconds_total{*};
+   - node_disk_write_time_seconds_total{*};
+Network:
+   - node_network_receive_bytes_total{*};
+   - node_network_transmit_bytes_total{*};
+   - node_network_receive_errs_total{*};
+   - node_network_transmit_errs_total{*};
+   - node_network_transmit_drop_total{*};
+   - node_network_receive_drop_total{*};
 1. Установите в свою виртуальную машину [Netdata](https://github.com/netdata/netdata). Воспользуйтесь [готовыми пакетами](https://packagecloud.io/netdata/netdata/install) для установки (`sudo apt install -y netdata`). 
    
    После успешной установки:
